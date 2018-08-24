@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", “Yu Gothic”, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  -webkit-print-color-adjust: exact;
+  line-height: 1.5em; }
+
+.sheet {
+  float: left;
+  text-align: center;
+  width: 210mm !important;
+  min-height: 297mm !important; }
+
+#explain {
+  min-height: 100%;
+  position: absolute;
+  text-align: left;
+  width: 240px;
+  z-index: 500;
+  right: 80px;
+  margin: 3mm; }
+  #explain button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.25em;
+    margin-bottom: 1em; }
+  #explain h2 {
+    font-size: 18px; }
+
+#header {
+  font-size: 3.5mm;
+  text-align: right;
+  width: 210mm !important; }
+  #header #qrcodecontainer {
+    float: left;
+    display: inline-block;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35);
+    position: absolute;
+    left: 1rem; }
+
+#content {
+  position: relative;
+  max-width: 1200px; }
+  #content a {
+    color: rgba(0, 0, 0, 0.7); }
+    #content a:focus, #content a:hover {
+      color: rgba(0, 0, 0, 0.6); }
+  #content #page h1 {
+    font-size: 7mm;
+    margin: 0 auto 0.25em; }
+  #content #page #date {
+    font-size: 4mm;
+    font-weight: bold;
+    padding: 0.25em 0; }
+  #content #page #map {
+    width: 100%;
+    height: 140mm; }
+    #content #page #map .legend {
+      line-height: 18px;
+      color: #555;
+      background-color: #fff;
+      width: 100px;
+      opacity: 0.7; }
+      #content #page #map .legend .legend-type {
+        margin: 2px; }
+        #content #page #map .legend .legend-type i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          opacity: 0.7; }
+  #content #page #list {
+    text-align: left;
+    width: 100%; }
+    #content #page #list table {
+      width: 100%; }
+      #content #page #list table th.category_separator {
+        position: relative;
+        height: 12px;
+        vertical-align: bottom;
+        padding-left: 32px; }
+      #content #page #list table tr {
+        page-break-inside: avoid; }
+      #content #page #list table td {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #333;
+        padding: 2px; }
+        #content #page #list table td.id {
+          width: 5%;
+          text-align: center;
+          font-weight: bold;
+          font-style: italic; }
+        #content #page #list table td.value {
+          width: 45%;
+          border-top: none;
+          border-left: none;
+          border-right: none; }
+
+#footer {
+  font-size: 4mm;
+  padding: 1em 0;
+  text-align: left; }
+
+@media print {
+  body {
+    width: 190mm;
+    color: #000; }
+  .print_area {
+    display: block; }
+  .not_print_area {
+    display: none; } }
+
+@media screen {
+  body {
+    background-color: #eee;
+    color: #000; }
+    body h1 {
+      line-height: 40px; }
+    body #header #qrcodecontainer {
+      left: 4rem; }
+  .sheet {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+    padding: 10mm;
+    margin: 3mm; }
+  .print_area {
+    display: none; } }
+
+@media (max-width: 1248px) {
+  #explain {
+    width: 210mm;
+    position: static; } }
+
+@page {
+  size: A4;
+  margin: 10mm; }
